@@ -1,4 +1,13 @@
-const title1 = document.getElementById('homepageTitle1');
-const title2 = document.getElementById('homepageTitle2');
-const title3 = document.getElementById('homepageTitle3');
+const title = `The Coding Playground`;
 
+let i = 0;
+
+const typing = () => {
+    if (i < title.length) {
+        document.getElementById("homepageTitle").innerHTML += title.charAt(i);
+        i++;
+        setTimeout(typing, 50);
+    }
+}
+
+typing();
